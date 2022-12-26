@@ -1,0 +1,42 @@
+﻿@model BestCourse.Web.Models.Currency
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<style>
+    body {
+        background-image: linear-gradient(60deg, #c7d8e8, #fde6e7);
+    }
+
+    form {
+        border-radius: 30px !important;
+    }
+</style>
+
+<body>
+<form class="bg-white w-25" asp-action="Index">
+    <h2 class="text-center">hello</h2>
+    <div class="mb-3 m-3">
+        <select class="form-select" required asp-for="Curr">
+            <option selected>Currency</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="RUB">RUB</option>
+        </select>
+    </div>
+    <div class="mb-3 m-3">
+        <select class="form-select" required asp-for="City">
+            <option selected>City</option>
+            <option value="Brest">Brest</option>
+            <option value="Minsk">Minsk</option>
+            <option value="Gomel">Gomel</option>
+            <option value="Mogilev">Mogilev</option>
+            <option value="Vitebsk">Vitebsk</option>
+            <option value="Grodno">Grodno</option>
+        </select>
+    </div>
+    <button type="submit" class="m-3 btn btn-outline-primary text-center">Search</button>
+</form>
+</body>

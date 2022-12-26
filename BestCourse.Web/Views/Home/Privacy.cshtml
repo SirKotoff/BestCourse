@@ -1,0 +1,22 @@
+﻿@model IEnumerable<BestCourse.Web.Models.Currency>
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+@foreach (var a in Model)
+{
+    <br />
+        <div class="col-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">
+                        City: @a.City<br />
+                        Currency: @a.Curr<br />
+                        Date: @a.Date<br />
+                        Best buy currency: @a.BestCurrencyBuy<br />
+                    </p>
+                </div>
+            </div>
+        </div>
+}
